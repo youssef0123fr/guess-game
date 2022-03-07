@@ -1,0 +1,160 @@
+import random
+
+print('\sign/')
+name = input("name: \n")
+id = input('id:\n')
+can = False
+yes = False
+game_list_1 = ['man', 'woman', 'childern']
+game_word_1 = random.choice(game_list_1)
+game_list_2 = ['cat , dog , fish']
+game_word_2 = random.choice(game_list_2)
+game_list_3 = ['ground,sea , ocean']
+game_word_3 = random.choice(game_list_3)
+game_list_4 = ['pizza , meat , fruit']
+game_word_4 = random.choice(game_list_4)
+game_lim = 2
+game_level = 0
+
+if id[0] != "0":
+    print('*\\can`t enter')
+else:
+    if id[0] == '0':
+        print('informations of how you use the game<')
+        print('guess[man , woman , children]')
+        print('You only have three attempts')
+        print('You can exit by pressing the letter [q] >')
+        print('level one:')
+        can = True
+    else:
+        print('*\\error//*')
+        can = False
+# can ---------------------------------
+#
+#here id = ca0
+while can is True:
+    print('guess:')
+    guess = input('[ // ')
+    if guess == 'q':
+        print('thank you \-_-/')
+        print(" by : ({>youssef ahmed<})")
+        quit()
+    if guess == game_word_1:
+        print('you win \\ ]')
+        game_level += 1
+        break
+    elif guess != game_word_1:
+        game_level += 1
+        print('not the right word \\ ]')
+        if game_level == game_lim:
+            print(
+                '*\\Sorry, you used the maximum number of attempts allowed ] //* >'
+            )
+            break
+        elif game_level != game_lim:
+            continue
+        if game_lim == game_level:
+            can = False
+            continue
+else:
+    print(' your id is wrong //*')
+if game_level - game_lim != 0 and can is True:
+    print('You have a chance to complete Do you like it ?')
+    a = input('{yes or no}')
+    if a == 'yes':
+        print('level Two')
+        print('guess[dog ,cat , fish]')
+        yes = True
+lim = 2
+level = 0
+while yes is True:
+    guess_2 = input('  [ 2 ')
+    if guess_2 == game_word_2:
+        print('you win \\ ]')
+        level += 1
+        break
+    elif guess_2 != game_word_2:
+        level += 1
+        print('not the right word // ]')
+        if level - lim == 0:
+            print(
+                '*\\Sorry, you used the maximum number of attempts allowed//* >'
+            )
+            yes = False
+            break
+        elif level != lim:
+            continue
+
+else:
+    print('thank you \-_-/')
+    print(" by : ({>youssef ahmed<})[3/7/2022]{monday}")
+    quit()
+if level - lim != 0 and yes is True:
+    print('You have a chance to complete Do you like it ')
+    a = input('{yes or no}')
+    if a == 'yes':
+        print('level there')
+        print('guess[ground , sea , ocean]')
+        yes = True
+lim = 2
+level = 0
+while yes is True:
+    guess_3 = input(' [ 3/ ')
+    if guess_3 == game_word_3:
+        print('you win ')
+        print('you are super!\\*]')
+        level += 1
+        break
+    elif guess_3 != game_word_2:
+        level += 1
+        print('not the right word \\ ]')
+        if level - lim == 0:
+            print(
+                '*\\Sorry, you used the maximum number of attempts allowed//* >'
+            )
+            yes = False
+            break
+        elif level != lim:
+            continue
+
+else:
+    print('thank you \-_-/')
+    print(" by : ({>youssef ahmed<})[3/7/2022]{monday}")
+    quit()
+if level - lim != 0 and yes is True:
+    print('You have a chance to complete Do you like it ')
+    a = input('{yes or no}')
+    if a == 'yes':
+        print('level four')
+        print('guess[pizza , meat , fruit]')
+        yes = True
+lim = 2
+level = 0
+while yes is True:
+    guess_4 = input(' [4 / ')
+    if guess_4 == game_word_4:
+        print('you win ')
+        print('You are so lucky!\\*]')
+        level += 1
+        break
+    elif guess_4 != game_word_4:
+        level += 1
+        print('not the right word \\ ]')
+        if level == lim:
+            print(
+                '*\\Sorry, you used the maximum number of attempts allowed//* >'
+            )
+            break
+        elif level != lim:
+            continue
+        if lim == level:
+            yes = False
+            break
+
+else:
+    print('thank you \-_-/')
+    print(" by : ({>youssef ahmed<})[3/7/2022]{monday}")
+    quit()
+print('thank you \-_-/')
+print(" by : ({>youssef ahmed<})[3/7/2022]{monday}")
+quit()
